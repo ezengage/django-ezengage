@@ -1,1 +1,21 @@
 ezengage django app
+
+How to use
+-------------------
+add eze_autho to INSTALLED_APPS
+
+:: 
+
+  INSTALLED_APPS = (
+     #.....
+     'eze_auth',
+     #....
+  }
+
+
+
+AUTHENTICATION_BACKENDS = ( 
+    'django.contrib.auth.backends.ModelBackend',
+    'ezcomment.eze_auth.auth_backends.EzEngageBackend',
+)
+
