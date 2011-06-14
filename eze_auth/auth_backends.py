@@ -50,7 +50,7 @@ class EzEngageBackend:
             user_profile = EzeUserProfile(user=user, identity = profile['identity'])
             user_profile.save()
 
-        for field in ['provider_code', 'avatar_url', 'preferred_username', 'display_name', 'name']:
+        for field in ['provider_code', 'provider_name', 'avatar_url', 'preferred_username', 'display_name', 'name']:
             if field in profile:
                 setattr(user_profile, field, profile[field])
         user_profile.save()

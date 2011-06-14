@@ -41,6 +41,7 @@ class EzEngageApiClient(object):
             return None
         
     def update_status(self, identity, status, lat = None, long = None):
+        print self.app_key
         url = self.api_root + 'status.json'
         params = {
             'app_key' : self.app_key,
